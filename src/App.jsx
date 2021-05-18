@@ -3,6 +3,7 @@ import './App.css'
 import InApp from './inapp'
 import attempt2 from './attempt2'
 import { useQuery } from 'react-query'
+import ExternalLink from './ExternalLinkIcon'
 
 function App() {
 	const [inApp, setInApp] = useState({})
@@ -29,12 +30,21 @@ function App() {
 	return (
 		<div className='App'>
 			<h1>Am I inside a in-app browser? 🤔</h1>
-			<p>
+			<p style={{ fontSize: '14px' }}>
 				<b>User Agent: </b>
 				{inApp.ua}
 			</p>
 			<section>
-				<h2>Attempt 1</h2>
+				<h3>
+					Attempt 1{' '}
+					<a
+						href='https://github.com/f2etw/detect-inapp/blob/master/src/inapp.js'
+						target='_blank'
+						rel='noopener noreferrer'
+					>
+						<ExternalLink />
+					</a>
+				</h3>
 				<p>User Agent Summary: {JSON.stringify(inApp.browser)}</p>
 				<p>
 					Desktop? {JSON.stringify(inApp.isDesktop)} / Mobile? {JSON.stringify(inApp.isMobile)}
@@ -43,12 +53,26 @@ function App() {
 			</section>
 
 			<section>
-				<h2>Attempt 2 (iOS only)</h2>
+				<h3>
+					Attempt 2 (iOS only){' '}
+					<a
+						href='https://github.com/f2etw/detect-inapp/blob/master/src/inapp.js'
+						target='_blank'
+						rel='noopener noreferrer'
+					>
+						<ExternalLink />
+					</a>
+				</h3>
 				<p>in app? {JSON.stringify(attempt2)}</p>
 			</section>
 
 			<section>
-				<h2>Attempt 3 </h2>
+				<h3>
+					Attempt 3{' '}
+					<a href='https://developers.whatismybrowser.com/' target='_blank' rel='noopener noreferrer'>
+						<ExternalLink />
+					</a>
+				</h3>
 				{isLoading && <p>loading...</p>}
 				{data && (
 					<>
@@ -57,7 +81,7 @@ function App() {
 						<p>hardware? {data.parse.hardware_type}</p>
 						<p>software type? {data.parse.software_sub_type}</p>
 						<details>
-							<summary>full response JSON</summary>
+							<summary>click here for more details</summary>
 							<textarea
 								cols='30'
 								rows='10'
