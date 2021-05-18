@@ -7,7 +7,23 @@ h1 {
 }
 
 section {
-	border: 1px solid rebeccapurple;
+	border: 1px solid salmon;
 	padding: 0 1em;
 	margin-bottom: 1em;
+}
+
+textarea {
+	width: 100%;
+	min-height: 30rem;
+	font-family: 'Lucida Console', Monaco, monospace;
+	font-size: 0.8rem;
+	line-height: 1.2;
+}
+
+details {
+	margin-bottom: 1em;
+}
+
+p {
+	margin: 0.5em 0;
 }

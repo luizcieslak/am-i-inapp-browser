@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import logo from './logo.svg'
 import './App.css'
 import InApp from './inapp'
 import attempt2 from './attempt2'
+import { useQuery } from 'react-query'
 
 function App() {
 	const [inApp, setInApp] = useState({})
@@ -12,6 +12,19 @@ function App() {
 		const inapp = new InApp(useragent)
 		setInApp(inapp)
 	}, [InApp])
+
+	const { isLoading, error, data } = useQuery('whatismybrowser', () =>
+		fetch('https://api.whatismybrowser.com/api/v2/user_agent_parse', {
+			method: 'post',
+			body: JSON.stringify({
+				user_agent: navigator.userAgent || navigator.vendor || window.opera,
+			}),
+			headers: {
+				'x-api-key': import.meta.env.VITE_WIMB_KEY,
+				'Content-Type': 'application/json',
+			},
+		}).then(res => res.json())
+	)
 
 	return (
 		<div className='App'>
@@ -32,6 +45,29 @@ function App() {
 			<section>
 				<h2>Attempt 2 (iOS only)</h2>
 				<p>in app? {JSON.stringify(attempt2)}</p>
+			</section>
+
+			<section>
+				<h2>Attempt 3 </h2>
+				{isLoading && <p>loading...</p>}
+				{data && (
+					<>
+						<p>in-app? {JSON.stringify(data.parse.software_sub_type === 'in-app-browser')}</p>
+						<p>software? {data.parse.simple_software_string}</p>
+						<p>hardware? {data.parse.hardware_type}</p>
+						<p>software type? {data.parse.software_sub_type}</p>
+						<details>
+							<summary>full response JSON</summary>
+							<textarea
+								cols='30'
+								rows='10'
+								readOnly
+								value={JSON.stringify(data.parse, undefined, 4)}
+							></textarea>
+						</details>
+					</>
+				)}
+				{error && <p>{error}</p>}
 			</section>
 		</div>
 	)
