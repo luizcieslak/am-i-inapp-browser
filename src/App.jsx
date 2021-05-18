@@ -14,24 +14,22 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Am I inside a in-app browser? 🤔</h1>
-        <p>
-          User Agent: {inApp.ua}
-        </p>
-        <p>
-          User Agent: {JSON.stringify(inApp.browser)}
-        </p>
-        <p>
-          Desktop? {JSON.stringify(inApp.isDesktop)}
-        </p>
-        <p>
-          Mobile? {JSON.stringify(inApp.isMobile)}
-        </p>
-        <p>
-          in app? {JSON.stringify(inApp.isInApp)}
-        </p>
-      </header>
+      <h1>Am I inside a in-app browser? 🤔</h1>
+      <p>
+        User Agent: {inApp.ua}
+      </p>
+      <p>
+        User Agent: {JSON.stringify(inApp.browser)}
+      </p>
+      <p>
+        Desktop? {JSON.stringify(inApp.isDesktop)}
+      </p>
+      <p>
+        Mobile? {JSON.stringify(inApp.isMobile)}
+      </p>
+      <p>
+        in app? {JSON.stringify(inApp.isInApp)}
+      </p>
     </div>
   )
 }
