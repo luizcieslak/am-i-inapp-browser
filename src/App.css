@@ -1,8 +1,12 @@
 .App {
-  padding: 1em;
+	padding: 1em;
 }
 
 h1 {
-  text-align: center;
+	text-align: center;
 }
 
+section {
+	border: 1px solid rebeccapurple;
+	padding: 1em;
+}
