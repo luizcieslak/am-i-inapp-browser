@@ -93,6 +93,10 @@ function App() {
 				)}
 				{error && <p>{error}</p>}
 			</section>
+
+			<a href='https://github.com/luizcieslak/am-i-inapp-browser' target='_blank' rel='noopener noreferrer'>
+				Source code
+			</a>
 		</div>
 	)
 }
