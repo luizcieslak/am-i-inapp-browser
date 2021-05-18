@@ -1,5 +1,5 @@
 .App {
-	padding: 1em;
+	padding: 0 1em;
 }
 
 h1 {
@@ -8,5 +8,6 @@ h1 {
 
 section {
 	border: 1px solid rebeccapurple;
-	padding: 1em;
+	padding: 0 1em;
+	margin-bottom: 1em;
 }
