@@ -34,6 +34,10 @@ function App() {
 				<b>User Agent: </b>
 				{inApp.ua}
 			</p>
+
+			<a href={import.meta.env.BASE_URL} target='_new' style={{ paddingBottom: '1em' }}>
+				Open this outside
+			</a>
 			<section>
 				<h3>
 					Attempt 1{' '}
