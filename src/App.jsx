@@ -39,7 +39,7 @@ function App() {
 			</a>
 			<button
 				onClick={() => {
-					window.open(import.meta.env.BASE_URL, '_blank')
+					window.open(import.meta.env.BASE_URL, '_blank', 'location=yes')
 				}}
 			>
 				Open this outside
