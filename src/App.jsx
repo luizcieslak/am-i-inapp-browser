@@ -34,6 +34,9 @@ function App() {
 				<b>User Agent: </b>
 				{inApp.ua}
 			</p>
+			<a href={import.meta.env.BASE_URL} target='_blank'>
+				Open this outside
+			</a>
 			<button
 				onClick={() => {
 					window.open(import.meta.env.BASE_URL, '_blank')
