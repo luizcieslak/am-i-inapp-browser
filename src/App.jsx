@@ -37,6 +37,9 @@ function App() {
 			<a href={import.meta.env.BASE_URL} target='_blank'>
 				Open this outside
 			</a>
+			<a href={import.meta.env.BASE_URL} target='_system'>
+				Open this outside 2
+			</a>
 			<button
 				onClick={() => {
 					window.open(import.meta.env.BASE_URL, '_blank')
