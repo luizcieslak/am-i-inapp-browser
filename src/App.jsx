@@ -46,7 +46,20 @@ function App() {
 			<br />
 			<br />
 			<br />
-			<a href={`external:${import.meta.env.BASE_URL}`}>ext</a>
+			<a
+				href={`external:https://www.businessinsider.com/the-founder-ceo-statsbomb-career-pivoting-in-sports-industry-2021-5`}
+			>
+				ext BI
+			</a>
+			<br />
+			<br />
+			<br />
+			<a
+				href={`https://www.businessinsider.com/the-founder-ceo-statsbomb-career-pivoting-in-sports-industry-2021-5`}
+				target='_system'
+			>
+				_system BI
+			</a>
 			<br />
 			<br />
 			<br />
