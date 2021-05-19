@@ -39,10 +39,31 @@ function App() {
 			</a>
 			<button
 				onClick={() => {
+					window.open(import.meta.env.BASE_URL, '_blank')
+				}}
+			>
+				Open this outside no 3 arg
+			</button>
+			<button
+				onClick={() => {
 					window.open(import.meta.env.BASE_URL, '_blank', 'location=yes')
 				}}
 			>
-				Open this outside
+				Open this outside with location in 3 arg
+			</button>
+			<button
+				onClick={() => {
+					window.open(import.meta.env.BASE_URL, '_system')
+				}}
+			>
+				Open this outside _system
+			</button>
+			<button
+				onClick={() => {
+					window.open(import.meta.env.BASE_URL, '_system', 'location=yes')
+				}}
+			>
+				Open this outside _system + location in 3 arg
 			</button>
 			<section>
 				<h3>
