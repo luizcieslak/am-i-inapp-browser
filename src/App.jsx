@@ -85,10 +85,14 @@ function App() {
 			</button>
 			<button
 				onClick={() => {
-					window.open(import.meta.env.BASE_URL, '_system')
+					window.open(
+						'https://www.businessinsider.com/the-founder-ceo-statsbomb-career-pivoting-in-sports-industry-2021-5',
+						'_system',
+						'location=yes'
+					)
 				}}
 			>
-				Open this outside _system
+				BI _blank location=yes
 			</button>
 			<button
 				onClick={() => {
