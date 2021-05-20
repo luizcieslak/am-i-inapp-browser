@@ -123,24 +123,12 @@ function App() {
 				<h3>Try to get outside</h3>
 				<div class='grid'>
 					<a
-						href={`external:https://www.businessinsider.com/the-founder-ceo-statsbomb-career-pivoting-in-sports-industry-2021-5`}
-						target='_blank'
-					>
-						Link 1
-					</a>
-					<a
 						href={
 							'https://www.businessinsider.com/the-founder-ceo-statsbomb-career-pivoting-in-sports-industry-2021-5'
 						}
 						target='_system'
 					>
-						Link 2
-					</a>
-					<a
-						href={`https://www.businessinsider.com/the-founder-ceo-statsbomb-career-pivoting-in-sports-industry-2021-5`}
-						target='_system'
-					>
-						Link 3
+						Link 1
 					</a>
 					<button
 						onClick={() => {
@@ -152,13 +140,13 @@ function App() {
 						}}
 						style={{ width: '50%' }}
 					>
-						Link 4
+						Link 2
 					</button>
 					<a
 						href={`googlechrome://navigate?url=www.businessinsider.com/the-founder-ceo-statsbomb-career-pivoting-in-sports-industry-2021-5`}
 						target='_system'
 					>
-						Link 5
+						Link 3
 					</a>
 				</div>
 			</section>
