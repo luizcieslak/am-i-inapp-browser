@@ -47,11 +47,15 @@ function App() {
 						<ExternalLink />
 					</a>
 				</h3>
+				<p>
+					<span style={{ color: inApp.isInApp ? 'green' : 'red', fontWeight: 'bold' }}>
+						{JSON.stringify(inApp.isInApp)}
+					</span>
+				</p>
 				<p>User Agent Summary: {JSON.stringify(inApp.browser)}</p>
 				<p>
 					Desktop? {JSON.stringify(inApp.isDesktop)} / Mobile? {JSON.stringify(inApp.isMobile)}
 				</p>
-				<p>in app? {JSON.stringify(inApp.isInApp)}</p>
 			</section>
 
 			<section>
@@ -65,7 +69,11 @@ function App() {
 						<ExternalLink />
 					</a>
 				</h3>
-				<p>in app? {JSON.stringify(attempt2)}</p>
+				<p>
+					<span style={{ color: inApp.isInApp ? 'green' : 'red', fontWeight: 'bold' }}>
+						{JSON.stringify(attempt2)}
+					</span>
+				</p>
 			</section>
 
 			<section>
@@ -78,7 +86,11 @@ function App() {
 				{isLoading && <p>loading...</p>}
 				{data && (
 					<>
-						<p>in-app? {JSON.stringify(data.parse.software_sub_type === 'in-app-browser')}</p>
+						<p>
+							<span style={{ color: inApp.isInApp ? 'green' : 'red', fontWeight: 'bold' }}>
+								{JSON.stringify(data.parse.software_sub_type === 'in-app-browser')}
+							</span>
+						</p>
 						<p>software? {data.parse.simple_software_string}</p>
 						<p>hardware? {data.parse.hardware_type}</p>
 						<p>software type? {data.parse.software_sub_type}</p>
@@ -94,6 +106,18 @@ function App() {
 					</>
 				)}
 				{error && <p>{error}</p>}
+			</section>
+
+			<section>
+				<h3>
+					Attempt 4{' '}
+					<a href='https://github.com/atomantic/is-ua-webview/' target='_blank' rel='noopener noreferrer'>
+						<ExternalLink />
+					</a>
+				</h3>
+				<span style={{ color: inApp.isInApp ? 'green' : 'red', fontWeight: 'bold' }}>
+					{JSON.stringify(attempt4(navigator.userAgent || navigator.vendor || window.opera))}
+				</span>
 			</section>
 
 			<section>
@@ -139,16 +163,6 @@ function App() {
 					</a>
 				</div>
 			</section>
-			<section>
-				<h3>
-					Attempt 4{' '}
-					<a href='https://github.com/atomantic/is-ua-webview/' target='_blank' rel='noopener noreferrer'>
-						<ExternalLink />
-					</a>
-				</h3>
-				{JSON.stringify(attempt4(navigator.userAgent || navigator.vendor || window.opera))}
-			</section>
-
 			<a href='https://github.com/luizcieslak/am-i-inapp-browser' target='_blank' rel='noopener noreferrer'>
 				Source code
 			</a>
