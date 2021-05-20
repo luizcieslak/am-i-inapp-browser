@@ -52,10 +52,6 @@ function App() {
 						{JSON.stringify(inApp.isInApp)}
 					</span>
 				</p>
-				<p>User Agent Summary: {JSON.stringify(inApp.browser)}</p>
-				<p>
-					Desktop? {JSON.stringify(inApp.isDesktop)} / Mobile? {JSON.stringify(inApp.isMobile)}
-				</p>
 			</section>
 
 			<section>
@@ -91,18 +87,6 @@ function App() {
 								{JSON.stringify(data.parse.software_sub_type === 'in-app-browser')}
 							</span>
 						</p>
-						<p>software? {data.parse.simple_software_string}</p>
-						<p>hardware? {data.parse.hardware_type}</p>
-						<p>software type? {data.parse.software_sub_type}</p>
-						<details>
-							<summary>click here for more details</summary>
-							<textarea
-								cols='30'
-								rows='10'
-								readOnly
-								value={JSON.stringify(data.parse, undefined, 4)}
-							></textarea>
-						</details>
 					</>
 				)}
 				{error && <p>{error}</p>}
@@ -163,6 +147,18 @@ function App() {
 					</a>
 				</div>
 			</section>
+			<details>
+				<p>For attempt 1:</p>
+				<div style={{ paddingLeft: '1em', fontStyle: 'italic' }}>
+					<p>User Agent Summary: {JSON.stringify(inApp.browser)}</p>
+					<p>
+						Desktop? {JSON.stringify(inApp.isDesktop)} / Mobile? {JSON.stringify(inApp.isMobile)}
+					</p>
+				</div>
+				<summary>click here for more details</summary>
+				<p>For Attempt 3, using API:</p>
+				<textarea cols='30' rows='10' readOnly value={JSON.stringify(data, undefined, 4)}></textarea>
+			</details>
 			<a href='https://github.com/luizcieslak/am-i-inapp-browser' target='_blank' rel='noopener noreferrer'>
 				Source code
 			</a>
