@@ -34,6 +34,7 @@ function App() {
 				<b>User Agent: </b>
 				{inApp.ua}
 			</p>
+
 			<section>
 				<h3>
 					Attempt 1{' '}
@@ -92,6 +93,50 @@ function App() {
 					</>
 				)}
 				{error && <p>{error}</p>}
+			</section>
+
+			<section>
+				<h3>Try to get outside</h3>
+				<div class='grid'>
+					<a
+						href={`external:https://www.businessinsider.com/the-founder-ceo-statsbomb-career-pivoting-in-sports-industry-2021-5`}
+						target='_blank'
+					>
+						Link 1
+					</a>
+					<a
+						href={
+							'https://www.businessinsider.com/the-founder-ceo-statsbomb-career-pivoting-in-sports-industry-2021-5'
+						}
+						target='_system'
+					>
+						Link 2
+					</a>
+					<a
+						href={`https://www.businessinsider.com/the-founder-ceo-statsbomb-career-pivoting-in-sports-industry-2021-5`}
+						target='_system'
+					>
+						Link 3
+					</a>
+					<button
+						onClick={() => {
+							window.open(
+								'https://www.businessinsider.com/the-founder-ceo-statsbomb-career-pivoting-in-sports-industry-2021-5',
+								'_system',
+								'location=yes'
+							)
+						}}
+						style={{ width: '50%' }}
+					>
+						Link 4
+					</button>
+					<a
+						href={`googlechrome://navigate?url=www.businessinsider.com/the-founder-ceo-statsbomb-career-pivoting-in-sports-industry-2021-5`}
+						target='_system'
+					>
+						Link 5
+					</a>
+				</div>
 			</section>
 
 			<a href='https://github.com/luizcieslak/am-i-inapp-browser' target='_blank' rel='noopener noreferrer'>
