@@ -4,6 +4,7 @@ import InApp from './inapp'
 import attempt2 from './attempt2'
 import { useQuery } from 'react-query'
 import ExternalLink from './ExternalLinkIcon'
+import attempt4 from 'is-ua-webview'
 
 function App() {
 	const [inApp, setInApp] = useState({})
@@ -137,6 +138,15 @@ function App() {
 						Link 5
 					</a>
 				</div>
+			</section>
+			<section>
+				<h3>
+					Attempt 4{' '}
+					<a href='https://github.com/atomantic/is-ua-webview/' target='_blank' rel='noopener noreferrer'>
+						<ExternalLink />
+					</a>
+				</h3>
+				{JSON.stringify(attempt4(navigator.userAgent || navigator.vendor || window.opera))}
 			</section>
 
 			<a href='https://github.com/luizcieslak/am-i-inapp-browser' target='_blank' rel='noopener noreferrer'>

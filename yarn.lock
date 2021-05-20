@@ -422,6 +422,11 @@ is-core-module@^2.2.0:
   dependencies:
     has "^1.0.3"
 
+is-ua-webview@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/is-ua-webview/-/is-ua-webview-1.0.5.tgz#f5798e50e379aced92b6bf1a13b5ee645dbef09b"
+  integrity sha512-CfaCxjFTU3xUluvcKg0+3j5uXeyneANFnC9ynSCTFA06nFt1okFBXpkKVxqxtFAKcbsFl+vrOQ7g6hlaDIQu8A==
+
 js-sha3@0.8.0:
   version "0.8.0"
   resolved "https://registry.yarnpkg.com/js-sha3/-/js-sha3-0.8.0.tgz#b9b7a5da73afad7dedd0f8c463954cbde6818840"
