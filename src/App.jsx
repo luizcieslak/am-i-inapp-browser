@@ -36,73 +36,88 @@ function App() {
 				{inApp.ua}
 			</p>
 
-			<section>
-				<h3>
-					Attempt 1{' '}
-					<a
-						href='https://github.com/f2etw/detect-inapp/blob/master/src/inapp.js'
-						target='_blank'
-						rel='noopener noreferrer'
-					>
-						<ExternalLink />
-					</a>
-				</h3>
-				<p>
+			<div class='grid-attempts'>
+				<section>
+					<h3>
+						Attempt 1{' '}
+						<a
+							href='https://github.com/f2etw/detect-inapp/blob/master/src/inapp.js'
+							target='_blank'
+							rel='noopener noreferrer'
+						>
+							<ExternalLink />
+						</a>
+					</h3>
+					<p>
+						<span style={{ color: inApp.isInApp ? 'green' : 'red', fontWeight: 'bold' }}>
+							{JSON.stringify(inApp.isInApp)}
+						</span>
+					</p>
+				</section>
+
+				<section>
+					<h3>
+						Attempt 2 (iOS only){' '}
+						<a
+							href='https://github.com/f2etw/detect-inapp/blob/master/src/inapp.js'
+							target='_blank'
+							rel='noopener noreferrer'
+						>
+							<ExternalLink />
+						</a>
+					</h3>
+					<p>
+						<span style={{ color: inApp.isInApp ? 'green' : 'red', fontWeight: 'bold' }}>
+							{JSON.stringify(attempt2)}
+						</span>
+					</p>
+				</section>
+
+				<section>
+					<h3>
+						Attempt 3{' '}
+						<a href='https://developers.whatismybrowser.com/' target='_blank' rel='noopener noreferrer'>
+							<ExternalLink />
+						</a>
+					</h3>
+					{isLoading && <p>loading...</p>}
+					{data && (
+						<>
+							<p>
+								<span style={{ color: inApp.isInApp ? 'green' : 'red', fontWeight: 'bold' }}>
+									{JSON.stringify(data.parse.software_sub_type === 'in-app-browser')}
+								</span>
+							</p>
+						</>
+					)}
+					{error && <p>{error}</p>}
+				</section>
+
+				<section>
+					<h3>
+						Attempt 4{' '}
+						<a href='https://github.com/atomantic/is-ua-webview/' target='_blank' rel='noopener noreferrer'>
+							<ExternalLink />
+						</a>
+					</h3>
 					<span style={{ color: inApp.isInApp ? 'green' : 'red', fontWeight: 'bold' }}>
-						{JSON.stringify(inApp.isInApp)}
+						{JSON.stringify(attempt4(navigator.userAgent || navigator.vendor || window.opera))}
 					</span>
-				</p>
-			</section>
+				</section>
+			</div>
 
-			<section>
-				<h3>
-					Attempt 2 (iOS only){' '}
-					<a
-						href='https://github.com/f2etw/detect-inapp/blob/master/src/inapp.js'
-						target='_blank'
-						rel='noopener noreferrer'
-					>
-						<ExternalLink />
-					</a>
-				</h3>
-				<p>
-					<span style={{ color: inApp.isInApp ? 'green' : 'red', fontWeight: 'bold' }}>
-						{JSON.stringify(attempt2)}
-					</span>
-				</p>
-			</section>
-
-			<section>
-				<h3>
-					Attempt 3{' '}
-					<a href='https://developers.whatismybrowser.com/' target='_blank' rel='noopener noreferrer'>
-						<ExternalLink />
-					</a>
-				</h3>
-				{isLoading && <p>loading...</p>}
-				{data && (
-					<>
-						<p>
-							<span style={{ color: inApp.isInApp ? 'green' : 'red', fontWeight: 'bold' }}>
-								{JSON.stringify(data.parse.software_sub_type === 'in-app-browser')}
-							</span>
-						</p>
-					</>
-				)}
-				{error && <p>{error}</p>}
-			</section>
-
-			<section>
-				<h3>
-					Attempt 4{' '}
-					<a href='https://github.com/atomantic/is-ua-webview/' target='_blank' rel='noopener noreferrer'>
-						<ExternalLink />
-					</a>
-				</h3>
-				<span style={{ color: inApp.isInApp ? 'green' : 'red', fontWeight: 'bold' }}>
-					{JSON.stringify(attempt4(navigator.userAgent || navigator.vendor || window.opera))}
-				</span>
-			</section>
+			<details>
+				<p>For attempt 1:</p>
+				<div style={{ paddingLeft: '1em', fontStyle: 'italic' }}>
+					<p>User Agent Summary: {JSON.stringify(inApp.browser)}</p>
+					<p>
+						Desktop? {JSON.stringify(inApp.isDesktop)} / Mobile? {JSON.stringify(inApp.isMobile)}
+					</p>
+				</div>
+				<summary>click here for more details</summary>
+				<p>For Attempt 3, using API:</p>
+				<textarea cols='30' rows='10' readOnly value={JSON.stringify(data, undefined, 4)}></textarea>
+			</details>
 
 			<section>
 				<h3>Try to get outside</h3>
@@ -147,18 +162,6 @@ function App() {
 					</a>
 				</div>
 			</section>
-			<details>
-				<p>For attempt 1:</p>
-				<div style={{ paddingLeft: '1em', fontStyle: 'italic' }}>
-					<p>User Agent Summary: {JSON.stringify(inApp.browser)}</p>
-					<p>
-						Desktop? {JSON.stringify(inApp.isDesktop)} / Mobile? {JSON.stringify(inApp.isMobile)}
-					</p>
-				</div>
-				<summary>click here for more details</summary>
-				<p>For Attempt 3, using API:</p>
-				<textarea cols='30' rows='10' readOnly value={JSON.stringify(data, undefined, 4)}></textarea>
-			</details>
 			<a href='https://github.com/luizcieslak/am-i-inapp-browser' target='_blank' rel='noopener noreferrer'>
 				Source code
 			</a>
