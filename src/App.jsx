@@ -34,6 +34,13 @@ function App() {
 				<b>User Agent: </b>
 				{inApp.ua}
 			</p>
+
+			<a href={`googlechrome://navigate?url=${import.meta.env.BASE_URL}`} target='_blank'>
+				chrome deep link
+			</a>
+			<br />
+			<br />
+			<br />
 			<a href={import.meta.env.BASE_URL} target='_blank'>
 				Open this outside
 			</a>
@@ -94,6 +101,19 @@ function App() {
 			>
 				BI _blank location=yes
 			</button>
+			<button
+				onClick={() => {
+					window.open(`googlechrome://navigate?url=${import.meta.env.BASE_URL}`, '_system', 'location=yes')
+				}}
+			>
+				chrome deep link
+			</button>
+			<a href={`googlechrome://navigate?url=${import.meta.env.BASE_URL}`}>chrome deep link no target</a>
+			<br />
+			<br />
+			<a href={`googlechrome://navigate?url=${import.meta.env.BASE_URL}`} target='_system'>
+				chrome deep link target _system
+			</a>
 			<button
 				onClick={() => {
 					window.open(import.meta.env.BASE_URL, '_system', 'location=yes')
