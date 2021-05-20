@@ -103,16 +103,23 @@ function App() {
 			</button>
 			<button
 				onClick={() => {
-					window.open(`googlechrome://navigate?url=${import.meta.env.BASE_URL}`, '_system', 'location=yes')
+					window.open(`googlechrome://${import.meta.env.BASE_URL}`, '_system', 'location=yes')
 				}}
 			>
 				chrome deep link
 			</button>
-			<a href={`googlechrome://navigate?url=${import.meta.env.BASE_URL}`}>chrome deep link no target</a>
+			<a
+				href={`googlechrome://www.businessinsider.com/the-founder-ceo-statsbomb-career-pivoting-in-sports-industry-2021-5`}
+			>
+				chrome deep BI VARIANT 1
+			</a>
 			<br />
 			<br />
-			<a href={`googlechrome://navigate?url=${import.meta.env.BASE_URL}`} target='_system'>
-				chrome deep link target _system
+			<a
+				href={`googlechrome://navigate?url=www.businessinsider.com/the-founder-ceo-statsbomb-career-pivoting-in-sports-industry-2021-5`}
+				target='_system'
+			>
+				chrome deep BI VARIANT
 			</a>
 			<button
 				onClick={() => {
