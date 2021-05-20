@@ -158,6 +158,12 @@ function App() {
 					>
 						Link 3
 					</a>
+					<a
+						href={`googlechrome://www.businessinsider.com/the-founder-ceo-statsbomb-career-pivoting-in-sports-industry-2021-5`}
+						target='_system'
+					>
+						Link 4
+					</a>
 				</div>
 			</section>
 			<a href='https://github.com/luizcieslak/am-i-inapp-browser' target='_blank' rel='noopener noreferrer'>
