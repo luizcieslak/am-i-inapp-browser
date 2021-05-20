@@ -67,7 +67,7 @@ function App() {
 						</a>
 					</h3>
 					<p>
-						<span style={{ color: inApp.isInApp ? 'green' : 'red', fontWeight: 'bold' }}>
+						<span style={{ color: attempt2 ? 'green' : 'red', fontWeight: 'bold' }}>
 							{JSON.stringify(attempt2)}
 						</span>
 					</p>
@@ -84,7 +84,12 @@ function App() {
 					{data && (
 						<>
 							<p>
-								<span style={{ color: inApp.isInApp ? 'green' : 'red', fontWeight: 'bold' }}>
+								<span
+									style={{
+										color: data.parse.software_sub_type === 'in-app-browser' ? 'green' : 'red',
+										fontWeight: 'bold',
+									}}
+								>
 									{JSON.stringify(data.parse.software_sub_type === 'in-app-browser')}
 								</span>
 							</p>
@@ -100,7 +105,12 @@ function App() {
 							<ExternalLink />
 						</a>
 					</h3>
-					<span style={{ color: inApp.isInApp ? 'green' : 'red', fontWeight: 'bold' }}>
+					<span
+						style={{
+							color: attempt4(navigator.userAgent || navigator.vendor || window.opera) ? 'green' : 'red',
+							fontWeight: 'bold',
+						}}
+					>
 						{JSON.stringify(attempt4(navigator.userAgent || navigator.vendor || window.opera))}
 					</span>
 				</section>
