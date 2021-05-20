@@ -35,99 +35,6 @@ function App() {
 				{inApp.ua}
 			</p>
 
-			<a href={`googlechrome://navigate?url=${import.meta.env.BASE_URL}`} target='_blank'>
-				chrome deep link
-			</a>
-			<br />
-			<br />
-			<br />
-			<a href={import.meta.env.BASE_URL} target='_blank'>
-				Open this outside
-			</a>
-			<br />
-			<br />
-			<br />
-			<a href={import.meta.env.BASE_URL} target='_system'>
-				Open this outside 2
-			</a>
-			<br />
-			<br />
-			<br />
-			<a
-				href={`external:https://www.businessinsider.com/the-founder-ceo-statsbomb-career-pivoting-in-sports-industry-2021-5`}
-			>
-				ext BI
-			</a>
-			<br />
-			<br />
-			<br />
-			<a
-				href={`https://www.businessinsider.com/the-founder-ceo-statsbomb-career-pivoting-in-sports-industry-2021-5`}
-				target='_system'
-			>
-				_system BI
-			</a>
-			<br />
-			<br />
-			<br />
-			<a href={`external:${import.meta.env.BASE_URL}`} target='_system'>
-				ext _system
-			</a>
-			<br />
-			<br />
-			<br />
-			<button
-				onClick={() => {
-					window.open(import.meta.env.BASE_URL, '_blank')
-				}}
-			>
-				Open this outside no 3 arg
-			</button>
-			<button
-				onClick={() => {
-					window.open(import.meta.env.BASE_URL, '_blank', 'location=yes')
-				}}
-			>
-				Open this outside with location in 3 arg
-			</button>
-			<button
-				onClick={() => {
-					window.open(
-						'https://www.businessinsider.com/the-founder-ceo-statsbomb-career-pivoting-in-sports-industry-2021-5',
-						'_system',
-						'location=yes'
-					)
-				}}
-			>
-				BI _blank location=yes
-			</button>
-			<button
-				onClick={() => {
-					window.open(`googlechrome://${import.meta.env.BASE_URL}`, '_system', 'location=yes')
-				}}
-			>
-				chrome deep link
-			</button>
-			<a
-				href={`googlechrome://www.businessinsider.com/the-founder-ceo-statsbomb-career-pivoting-in-sports-industry-2021-5`}
-			>
-				chrome deep BI VARIANT 1
-			</a>
-			<br />
-			<br />
-			<a
-				href={`googlechrome://navigate?url=www.businessinsider.com/the-founder-ceo-statsbomb-career-pivoting-in-sports-industry-2021-5`}
-				target='_system'
-			>
-				chrome deep BI VARIANT
-			</a>
-			<button
-				onClick={() => {
-					window.open(import.meta.env.BASE_URL, '_system', 'location=yes')
-				}}
-			>
-				Open this outside _system + location in 3 arg
-			</button>
 			<section>
 				<h3>
 					Attempt 1{' '}
@@ -186,6 +93,50 @@ function App() {
 					</>
 				)}
 				{error && <p>{error}</p>}
+			</section>
+
+			<section>
+				<h3>Try to get outside</h3>
+				<div class='grid'>
+					<a
+						href={`external:https://www.businessinsider.com/the-founder-ceo-statsbomb-career-pivoting-in-sports-industry-2021-5`}
+						target='_blank'
+					>
+						Link 1
+					</a>
+					<a
+						href={
+							'https://www.businessinsider.com/the-founder-ceo-statsbomb-career-pivoting-in-sports-industry-2021-5'
+						}
+						target='_system'
+					>
+						Link 2
+					</a>
+					<a
+						href={`https://www.businessinsider.com/the-founder-ceo-statsbomb-career-pivoting-in-sports-industry-2021-5`}
+						target='_system'
+					>
+						Link 3
+					</a>
+					<button
+						onClick={() => {
+							window.open(
+								'https://www.businessinsider.com/the-founder-ceo-statsbomb-career-pivoting-in-sports-industry-2021-5',
+								'_system',
+								'location=yes'
+							)
+						}}
+						style={{ width: '50%' }}
+					>
+						Link 4
+					</button>
+					<a
+						href={`googlechrome://navigate?url=www.businessinsider.com/the-founder-ceo-statsbomb-career-pivoting-in-sports-industry-2021-5`}
+						target='_system'
+					>
+						Link 5
+					</a>
+				</div>
 			</section>
 
 			<a href='https://github.com/luizcieslak/am-i-inapp-browser' target='_blank' rel='noopener noreferrer'>
