@@ -153,7 +153,7 @@ function App() {
 						Link 2
 					</button>
 					<a
-						href={`safari://navigate?url=www.businessinsider.com/the-founder-ceo-statsbomb-career-pivoting-in-sports-industry-2021-5`}
+						href={`www.businessinsider.com/the-founder-ceo-statsbomb-career-pivoting-in-sports-industry-2021-5?ref=0`}
 						target='_system'
 					>
 						Link 3
