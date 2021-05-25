@@ -133,43 +133,42 @@ function App() {
 				<h3>Try to get outside</h3>
 				<div class='grid'>
 					<a
-						href={`intent://navigate?url=www.http.cat#Intent;scheme=;package=com.android.browser;end`}
+						href={
+							'https://www.businessinsider.com/the-founder-ceo-statsbomb-career-pivoting-in-sports-industry-2021-5'
+						}
 						target='_system'
 					>
 						Link 1
 					</a>
-					<a
-						href={`intent://www.http.cat?link_click_id=123456#Intent;scheme=;package=com.android.browser;end`}
-						target='_system'
+					<button
+						onClick={() => {
+							window.open(
+								'https://www.businessinsider.com/the-founder-ceo-statsbomb-career-pivoting-in-sports-industry-2021-5',
+								'_system',
+								'location=yes'
+							)
+						}}
+						style={{ width: '50%' }}
 					>
 						Link 2
-					</a>
+					</button>
 					<a
-						href={`intent://navigate?url=www.http.cat#Intent;scheme=;package=com.android.browser;S.browser_fallback_url=http%3A%2F%2Fzxing.org;end`}
+						href={`googlechrome://navigate?url=www.businessinsider.com/the-founder-ceo-statsbomb-career-pivoting-in-sports-industry-2021-5`}
 						target='_system'
 					>
-						Link 3 fallback url
+						Link 3
 					</a>
-
 					<a
-						href={`intent://www.http.cat#Intent;scheme=;package=com.android.browser;S.browser_fallback_url=http%3A%2F%2Fzxing.org;end`}
+						href={`googlechrome://www.businessinsider.com/the-founder-ceo-statsbomb-career-pivoting-in-sports-industry-2021-5`}
 						target='_system'
 					>
-						Link 3 fallback url 2
+						Link 4
 					</a>
-
 					<a
-						href={`intent://navigate?url=www.http.cat#Intent;scheme=googlechrome;package=com.android.browser;S.browser_fallback_url=http%3A%2F%2Fzxing.org;end`}
+						href='intent://navigate?url=www.http.cat#Intent;scheme=;package=com.android.browser;S.browser_fallback_url=http%3A%2F%2Fhttp.cat;end'
 						target='_system'
 					>
-						Link 4 with scheme
-					</a>
-
-					<a
-						href={`intent://www.http.cat#Intent;scheme=googlechrome;package=com.android.browser;S.browser_fallback_url=http%3A%2F%2Fzxing.org;end`}
-						target='_system'
-					>
-						Link 4 with scheme 2
+						Link 5
 					</a>
 				</div>
 			</section>
