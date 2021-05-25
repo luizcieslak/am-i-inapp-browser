@@ -1,6 +1,6 @@
 # Am I inside in-app browser
 
-Series of tests to detect an in-app browser and attempts to escape from it.
+Series of tests to detect an in-app browser (aka WebViews) and to escape from it.
 
 ## Introduction
 
@@ -64,10 +64,37 @@ Attempt 4: Using android intents:
 
 ## Results
 
+**Is the in-app browser detectable?**
+
+| App/OS  | LinkedIn | Facebook | Facebook Messenger | Instagram |
+|---------|----------|----------|--------------------|-----------|
+| Android | No*      | Yes      | Yes                | Yes       |
+| iOS     | Yes      | Yes      | Yes                | Yes       |
+
+LinkedIn For android does not use a custom instance of a WebView. It uses whatever the default browser is, keeping the storage, which is great.
+
+WhatIsMyBrowser API (detection attempt 3) gave the same results as the simpler implementations.
+
+**Is the in-app browser escapable?**
+
+Only using chrome deep links (escape attempt 3). Currently all the other attemps failed.
+
+`window.open()`, anchor tags with `target='_blank'`, `target='_system'` opens the other window within the same instance. 
+
+`safari://url` deep link does not work.
+
+`intent://` for android devices goes to Google Play Store with a spinner loading indefinitely (maybe I got the implementation wrongly).
+
+This means that a explicit approach needs to be used in order to open another app inside a in-app browser. However, that does not work for Safari, which is a bummer. 
+
+In [statistics by StatCounter](https://gs.statcounter.com/) it gives you what is the market share of browsers, chrome being at ~64%. So, if you implement this funcitonality to escape from a in-app browser, you have this porcentace of change to make it work. I'm interested this proportion is the same for iOS devices only, since Safari is more a common browser used in this system, something that these statistics does not provide.
+
+
 ## Questions without answers
 
 - How's the process of build a in-app browser functionality works and what's the effort to change the user-agent string to contain your app name with the version build number?
 - Is it possible to have a "general" deep link generation that opens an URL in the default mobile browser? Like an intent for android development but for mobile web?
+- How GitHub website/app does deep linking redirect? If u click in the "source code" link in the demo, it will open the GitHub app if you have that installed. In the anchor `href` there's no mention to the app whatsoever.
 
 ## References
 
@@ -84,6 +111,8 @@ https://developer.chrome.com/docs/multidevice/android/intents/
 https://developer.apple.com/forums/thread/105641
 
 https://blog.branch.io/technical-guide-to-android-chrome-intents/
+
+https://twitter.com/NolanOBrien/status/1129041460026859520
 
 SO Threads:
 
