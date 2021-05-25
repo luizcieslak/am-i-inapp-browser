@@ -87,7 +87,7 @@ Only using chrome deep links (escape attempt 3). Currently all the other attemps
 
 This means that a explicit approach needs to be used in order to open another app inside a in-app browser. However, that does not work for Safari, which is a bummer.
 
-In [statistics by StatCounter](https://gs.statcounter.com/) it gives you what is the market share of browsers, chrome being at ~64%. So, if you implement this funcitonality to escape from a in-app browser, you have this porcentace of change to make it work. I'm interested this proportion is the same for iOS devices only, since Safari is more a common browser used in this system, something that these statistics does not provide.
+In [statistics by StatCounter](https://gs.statcounter.com/) it gives you what is the market share of browsers, chrome being at ~64%. So, if you implement this functionality to escape from a in-app browser, you have this porcentage of chance to make it work. I'm interested this proportion is the same for iOS devices only, since Safari is more a common browser used in this system, something that these statistics does not provide.
 
 I have to state that I do not agree with this implementation since it reinforces the Google monopoly over the Web.
 
