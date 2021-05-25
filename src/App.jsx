@@ -133,28 +133,43 @@ function App() {
 				<h3>Try to get outside</h3>
 				<div class='grid'>
 					<a
-						href={`intent://open?link_click_id=123456#Intent;scheme=;package=com.android.browser;end`}
+						href={`intent://navigate?url=www.http.cat#Intent;scheme=;package=com.android.browser;end`}
 						target='_system'
 					>
-						Link 1 open
+						Link 1
 					</a>
 					<a
-						href={`intent://view?link_click_id=123456#Intent;scheme=;package=com.android.browser;end`}
+						href={`intent://www.http.cat?link_click_id=123456#Intent;scheme=;package=com.android.browser;end`}
 						target='_system'
 					>
-						Link 2 view
+						Link 2
 					</a>
 					<a
-						href={`intent://open?link_click_id=123456#Intent;scheme=;package=com.android.browser;S.browser_fallback_url=http%3A%2F%2Fzxing.org;end`}
+						href={`intent://navigate?url=www.http.cat#Intent;scheme=;package=com.android.browser;S.browser_fallback_url=http%3A%2F%2Fzxing.org;end`}
 						target='_system'
 					>
 						Link 3 fallback url
 					</a>
+
 					<a
-						href={`intent://open?link_click_id=123456#Intent;scheme=googlechrome;package=com.android.browser;S.browser_fallback_url=http%3A%2F%2Fzxing.org;end`}
+						href={`intent://www.http.cat#Intent;scheme=;package=com.android.browser;S.browser_fallback_url=http%3A%2F%2Fzxing.org;end`}
+						target='_system'
+					>
+						Link 3 fallback url 2
+					</a>
+
+					<a
+						href={`intent://navigate?url=www.http.cat#Intent;scheme=googlechrome;package=com.android.browser;S.browser_fallback_url=http%3A%2F%2Fzxing.org;end`}
 						target='_system'
 					>
 						Link 4 with scheme
+					</a>
+
+					<a
+						href={`intent://www.http.cat#Intent;scheme=googlechrome;package=com.android.browser;S.browser_fallback_url=http%3A%2F%2Fzxing.org;end`}
+						target='_system'
+					>
+						Link 4 with scheme 2
 					</a>
 				</div>
 			</section>
