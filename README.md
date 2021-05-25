@@ -50,6 +50,18 @@ Attempt 3: Using a Google Chrome deep link:
 <a href="googlechrome://http.cat" target="_system">Link 4</a>
 ```
 
+Attempt 4: Using android intents:
+
+```js
+// android only
+<a
+	href='intent://navigate?url=www.http.cat#Intent;scheme=;package=com.android.browser;S.browser_fallback_url=http%3A%2F%2Fhttp.cat;end'
+	target='_system'
+>
+	Link 5
+</a>
+```
+
 ## Results
 
 ## Questions without answers
@@ -67,9 +79,13 @@ https://mobiforge.com/research-analysis/webviews-and-user-agent-strings
 
 https://www.stoutner.com/the-x-requested-with-header/
 
-SO Threads:
+https://developer.chrome.com/docs/multidevice/android/intents/
 
 https://developer.apple.com/forums/thread/105641
+
+https://blog.branch.io/technical-guide-to-android-chrome-intents/
+
+SO Threads:
 
 https://stackoverflow.com/questions/51917577/deep-link-to-open-safari-from-another-app
 
@@ -78,3 +94,5 @@ https://stackoverflow.com/questions/12013416/is-there-any-way-in-android-to-forc
 https://stackoverflow.com/questions/34491190/how-to-find-the-user-agent-string-for-linkedin-app-browser-from-ios
 
 https://stackoverflow.com/questions/34359781/how-to-open-app-from-a-link-without-asking-user-to-decide-between-browser-or-app
+
+https://android.stackexchange.com/questions/14869/the-name-of-the-default-android-browser

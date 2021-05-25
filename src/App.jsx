@@ -164,6 +164,12 @@ function App() {
 					>
 						Link 4
 					</a>
+					<a
+						href='intent://navigate?url=www.http.cat#Intent;scheme=;package=com.android.browser;S.browser_fallback_url=http%3A%2F%2Fhttp.cat;end'
+						target='_system'
+					>
+						Link 5
+					</a>
 				</div>
 			</section>
 			<a href='https://github.com/luizcieslak/am-i-inapp-browser' target='_blank' rel='noopener noreferrer'>
