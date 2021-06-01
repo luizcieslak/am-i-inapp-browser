@@ -36,7 +36,7 @@ function App() {
 				{inApp.ua}
 			</p>
 
-			<div class='grid-attempts'>
+			{/* <div class='grid-attempts'>
 				<section>
 					<h3>
 						Attempt 1{' '}
@@ -127,48 +127,22 @@ function App() {
 				<summary>click here for more details</summary>
 				<p>For Attempt 3, using API:</p>
 				<textarea cols='30' rows='10' readOnly value={JSON.stringify(data, undefined, 4)}></textarea>
-			</details>
+			</details> */}
 
 			<section>
 				<h3>Try to get outside</h3>
 				<div class='grid'>
 					<a
-						href={
-							'https://www.businessinsider.com/the-founder-ceo-statsbomb-career-pivoting-in-sports-industry-2021-5'
-						}
+						href={`insider://ins/post/uk-mom-says-daughter-died-from-chewing-too-much-gum-2021-5`}
 						target='_system'
 					>
-						Link 1
-					</a>
-					<button
-						onClick={() => {
-							window.open(
-								'https://www.businessinsider.com/the-founder-ceo-statsbomb-career-pivoting-in-sports-industry-2021-5',
-								'_system',
-								'location=yes'
-							)
-						}}
-						style={{ width: '50%' }}
-					>
-						Link 2
-					</button>
-					<a
-						href={`googlechrome://navigate?url=www.businessinsider.com/the-founder-ceo-statsbomb-career-pivoting-in-sports-industry-2021-5`}
-						target='_system'
-					>
-						Link 3
+						Insider
 					</a>
 					<a
-						href={`googlechrome://www.businessinsider.com/the-founder-ceo-statsbomb-career-pivoting-in-sports-industry-2021-5`}
+						href={`insider:/bi/post/jj-loses-chance-to-appeal-21-billion-baby-powder-judgment-2021-6`}
 						target='_system'
 					>
-						Link 4
-					</a>
-					<a
-						href='intent://navigate?url=www.http.cat#Intent;scheme=;package=com.android.browser;S.browser_fallback_url=http%3A%2F%2Fhttp.cat;end'
-						target='_system'
-					>
-						Link 5
+						Business Insider
 					</a>
 				</div>
 			</section>
