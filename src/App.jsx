@@ -139,7 +139,7 @@ function App() {
 						Insider
 					</a>
 					<a
-						href={`insider:/bi/post/jj-loses-chance-to-appeal-21-billion-baby-powder-judgment-2021-6`}
+						href={`insider://bi/post/jj-loses-chance-to-appeal-21-billion-baby-powder-judgment-2021-6`}
 						target='_system'
 					>
 						Business Insider
