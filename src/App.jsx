@@ -144,6 +144,12 @@ function App() {
 					>
 						Business Insider
 					</a>
+					<a
+						href={`http://onelink.to/a63mjx`}
+						target='_system'
+					>
+						Store link
+					</a>
 				</div>
 			</section>
 			<a href='https://github.com/luizcieslak/am-i-inapp-browser' target='_blank' rel='noopener noreferrer'>
